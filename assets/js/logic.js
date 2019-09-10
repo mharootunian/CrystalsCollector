@@ -5,28 +5,34 @@ $(document).ready(function () {
     let winsElem = $("#wins")
     let lossesElem = $("#losses")
 
-    gameInit();
-
-    function randomValue() {
-        return Math.floor(Math.random() * 13)
+    function randomNumberGenerator(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min
     }
 
     function randomizeCrystalValues() {
         $("img").each(function () {
-            $(this).attr("value", randomValue())
+            $(this).attr("value", randomNumberGenerator(1, 12))
         });
+    }
+
+    function updateHUD() {
+        scoreNeededElem.text(scoreNeeded)
+        currentScoreElem.text(currentScore)
+        winsElem.text(wins)
+        lossesElem.text(losses)
     }
 
     function gameInit() {
         currentScore = 0
-        scoreNeeded = Math.floor(Math.random() * 100)
+        scoreNeeded = randomNumberGenerator(16, 120)
         randomizeCrystalValues()
     }
 
+    updateHUD(); 
+    gameInit();
+
     $(".crystal").click(function () {
         currentScore += parseInt($(this).attr("value"))
-
-        //alert("Value of card: " + $(this).attr("value"))
 
         if (currentScore === scoreNeeded) { //win condition
             alert("You win")
@@ -36,12 +42,8 @@ $(document).ready(function () {
             alert("You went over")
             losses++
             gameInit()
-        } 
+        }
 
-        scoreNeededElem.text(scoreNeeded)
-        currentScoreElem.text(currentScore)
-        winsElem.text(wins)
-        lossesElem.text(losses)
+        updateHUD();
     });
-
 });
