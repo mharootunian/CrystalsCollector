@@ -8,7 +8,7 @@ $(document).ready(function () {
     gameInit();
 
     function randomValue() {
-        return Math.floor(Math.random() * 12)
+        return Math.floor(Math.random() * 13)
     }
 
     function randomizeCrystalValues() {
@@ -20,14 +20,13 @@ $(document).ready(function () {
     function gameInit() {
         currentScore = 0
         scoreNeeded = Math.floor(Math.random() * 100)
-        console.log(scoreNeeded)
         randomizeCrystalValues()
     }
 
     $(".crystal").click(function () {
         currentScore += parseInt($(this).attr("value"))
 
-        alert("Value of card: " + $(this).attr("value"))
+        //alert("Value of card: " + $(this).attr("value"))
 
         if (currentScore === scoreNeeded) { //win condition
             alert("You win")
@@ -44,6 +43,5 @@ $(document).ready(function () {
         winsElem.text(wins)
         lossesElem.text(losses)
     });
-
 
 });
