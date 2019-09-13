@@ -10,8 +10,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
-    <container>
+<body style="background: black">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
                 <h1 style="padding: 30px;background: grey">Crystal Collector!</h1>
@@ -39,23 +39,33 @@
             </div>
         </div>
 
+        <div class="row" style="background: darkgray">
+            <div class="col-lg-3">
+                <p>
+                    Wins: <span id="wins"></span>
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <p>
+                    Losses: <span id="losses"></span>
+                </p>
+            </div>
 
-        <p>
-            Wins: <span id="wins"></span>
-        </p>
+            <div class="col-lg-3">
+                <p>
+                    Score Needed: <span id="scoreNeeded"></span>
+                </p>
+            </div>
 
-        <p>
-            Losses: <span id="losses"></span>
-        </p>
+            <div class="col-lg-3">
+                <p>
+                    Current Score: <span id="currentScore"></span>
+                </p>
+            </div>
 
-        <p>
-            Score Needed: <span id="scoreNeeded"></span>
-        </p>
+        </div>
 
-        <p>
-            Current Score: <span id="currentScore"></span>
-        </p>
-    </container>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/js/logic.js"></script>
