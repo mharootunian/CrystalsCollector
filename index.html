@@ -6,30 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <input type="image" id="img1" class="crystal" width="200" height="200" src="assets/imgs/amythystCrystal.jpg">
-    <input type="image" id="img2" class="crystal" width="200" height="200" src="assets/imgs/blueCrystal.jpg">
-    <input type="image" id="img3" class="crystal" width="200" height="200" src="assets/imgs/quartzCrystal.jpg">
-    <input type="image" id="img4" class="crystal" width="200" height="200" src="assets/imgs/coolblue.png">
+    <container>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="padding: 30px;background: grey">Crystal Collector!</h1>
+            </div>
+        </div>
+
+        <div class="row" style="background: lightgrey">
+            <div class="col-lg-3">
+                <input type="image" id="img1" class="crystal" width="200" height="200"
+                    src="assets/imgs/amythystCrystal.jpg">
+            </div>
+
+            <div class="col-lg-3">
+                <input type="image" id="img2" class="crystal" width="200" height="200"
+                    src="assets/imgs/blueCrystal.jpg">
+            </div>
+
+            <div class="col-lg-3">
+                <input type="image" id="img3" class="crystal" width="200" height="200"
+                    src="assets/imgs/quartzCrystal.jpg">
+            </div>
+
+            <div class="col-lg-3">
+                <input type="image" id="img4" class="crystal" width="200" height="200" src="assets/imgs/coolblue.png">
+            </div>
+        </div>
 
 
-    <p>
-        Wins: <span id="wins"></span>
-    </p>
+        <p>
+            Wins: <span id="wins"></span>
+        </p>
 
-    <p>
-        Losses: <span id="losses"></span>
-    </p>
+        <p>
+            Losses: <span id="losses"></span>
+        </p>
 
-    <p>
-        Score Needed: <span id="scoreNeeded"></span>
-    </p>
+        <p>
+            Score Needed: <span id="scoreNeeded"></span>
+        </p>
 
-    <p>
-        Current Score: <span id="currentScore"></span>
-    </p>
+        <p>
+            Current Score: <span id="currentScore"></span>
+        </p>
+    </container>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="assets/js/logic.js"></script>
