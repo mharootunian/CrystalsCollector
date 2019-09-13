@@ -10,7 +10,7 @@ $(document).ready(function () {
     }
 
     function randomizeCrystalValues() {
-        $("img").each(function () {
+        $(".crystal").each(function () {
             $(this).attr("value", randomNumberGenerator(1, 12))
         });
     }
